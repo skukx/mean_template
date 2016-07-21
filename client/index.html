@@ -1,0 +1,52 @@
+<html data-ng-app="app" ng-strict-di>
+  <head>
+    <title></title>
+    <style>
+      .ng-hide {
+        display: none!important;
+      }
+
+      em {
+        font-weight: bold;
+      }
+
+      .form-compact .form-group {
+        margin-bottom: 0px;
+      }
+    </style>
+
+    <!-- inject-vendor:css -->
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <!-- endinject -->
+  </head>
+  <body>
+    <div data-ng-include="'app/layout/layout.html'"></div>
+
+    <!-- inject-vendor:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:js -->
+    <!-- Include Core -->
+    <script src="app/core/core.module.js"></script>
+    <script src="app/core/core.config.js"></script>
+
+    <!-- Include Main Module -->
+    <script src="app/app.module.js"></script>
+
+    <!-- Include Services -->
+    <script src="app/services/services.module.js"></script>
+    <script src="app/services/router/router.module.js"></script>
+    <script src="app/services/router/router.provider.js"></script>
+
+    <!-- Include Layout -->
+    <script src="app/layout/layout.module.js"></script>
+    <script src="app/layout/layout.controller.js"></script>
+    <!-- endinject -->
+  </body>
+</html>
