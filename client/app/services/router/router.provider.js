@@ -42,10 +42,7 @@
           $stateProvider.state(state.state, state.config);
         });
 
-        if (otherwisePath && !hasOtherwise) {
-          hasOtherwise = true;
-          $urlRouterProvider.otherwise(otherwisePath);
-        }
+        $urlRouterProvider.otherwise('/');
       }
 
       function getStates() {

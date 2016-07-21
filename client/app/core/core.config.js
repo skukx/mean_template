@@ -7,20 +7,10 @@
   }
 
   core.value('config', config);
-  //core.config(configureToastr);
   core.config(configureExceptions);
   core.run(onRun);
 
   //////////////////////////////////
-
-  // configureToastr.$inject ['toastrConfig'];
-  // function configureToastr(toastrConfig) {
-  //   angular
-  //     .extend(toastrConfig, {
-  //       autoDismiss: true,
-  //       positionClass: 'toast-bottom-right'
-  //     });
-  // }
 
   configureExceptions.$inject = ['$logProvider', 'exceptionHandlerProvider'];
   function configureExceptions($logProvider, exceptionHandlerProvider) {
