@@ -22,13 +22,13 @@
   //     });
   // }
 
-  configureExceptions.$inject = ['$logProvider'];
-  function configureExceptions($logProvider) {
+  configureExceptions.$inject = ['$logProvider', 'exceptionHandlerProvider'];
+  function configureExceptions($logProvider, exceptionHandlerProvider) {
     if ($logProvider.debugEnabled) {
       $logProvider.debugEnabled(true);
     }
 
-    // exceptionHandlerProvider.configure(config.appErrorPrefix);
+    exceptionHandlerProvider.configure(config.appErrorPrefix);
   }
 
   onRun.$inject = ['$rootScope', 'logger'];

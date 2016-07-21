@@ -25,8 +25,8 @@
     $provide.decorator('$exceptionHandler', extendExceptionHandler);
   }
 
-  extendExceptionHandler.$inject = ['$delegate', 'exceptionHandler', 'logger'];
-  function extendExceptionHandler($delegate, exceptionHandler, logger) {
+  extendExceptionHandler.$inject = ['$delegate', 'exceptionHandler', '$log'];
+  function extendExceptionHandler($delegate, exceptionHandler, $log) {
     return function(exception, cause) {
       var appErrorPrefix = exceptionHandler.config.appErrorPrefix || '';
       var errorData = { exception: exception, cause: cause };
@@ -34,7 +34,7 @@
       exception.message = appErrorPrefix + exception.message;
       $delegate(exception, cause);
 
-      logger.error(exception.message, errorData);
+      //$log.error(exception.message, errorData);
     }
   }
 })();
