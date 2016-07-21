@@ -7,7 +7,6 @@
 
   Home.$inject = [];
   function Home() {
-    throw('error error');
     vm = this;
 
     activate();

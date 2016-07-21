@@ -20,6 +20,7 @@
     "gulp": "^3.9.1",
     "angular": "^1.5.7",
     "bootstrap": "^3.3.6",
-    "angular-sanitize": "^1.5.7"
+    "angular-sanitize": "^1.5.7",
+    "angular-toastr": "^1.7.0"
   }
 }

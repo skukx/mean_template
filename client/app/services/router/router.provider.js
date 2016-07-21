@@ -21,10 +21,11 @@
     ///////////////////////////////////
 
     StateHelper.$inject = [
+      '$rootScope',
       '$state'
     ];
 
-    function StateHelper($state) {
+    function StateHelper($rootScope, $state) {
       var hasOtherwise = false;
 
       var service = {
@@ -43,7 +44,7 @@
 
         if (otherwisePath && !hasOtherwise) {
           hasOtherwise = true;
-          //$urlRouterProvider.otherwise(otherwisePath);
+          $urlRouterProvider.otherwise(otherwisePath);
         }
       }
 
