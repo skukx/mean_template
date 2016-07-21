@@ -12,10 +12,10 @@
   ];
 
   function StateHelperProvider($locationProvider, $stateProvider, $urlRouterProvider) {
-    $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: false
-    });
+    // $locationProvider.html5Mode({
+    //   enabled: true,
+    //   requireBase: false
+    // });
     this.$get = StateHelper;
 
     ///////////////////////////////////

@@ -3,6 +3,8 @@
     .module('app', [
       'app.core',
       'app.services',
-      'app.layout'
+      'app.layout',
+
+      'app.home'
     ]);
 })();
