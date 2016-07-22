@@ -19,7 +19,10 @@
           templateUrl: 'app/home/home.html',
           controller: 'Home',
           controllerAs: 'vm',
-          url: ''
+          url: '',
+          data: {
+            title: 'Home'
+          }
         }
       }
     ]

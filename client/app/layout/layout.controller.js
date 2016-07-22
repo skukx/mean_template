@@ -5,9 +5,10 @@
 
   //////////////////////////
 
-  Layout.$inject = [];
-  function Layout() {
+  Layout.$inject = ['config'];
+  function Layout(config) {
     vm = this;
+    vm.appTitle = config.appTitle
 
     activate();
 

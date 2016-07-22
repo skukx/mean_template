@@ -2,7 +2,7 @@
   var core = angular.module('app.core');
   var config = {
     appErrorPrefix: '[NG-App Error] ',
-    appTitle: 'Deseretbook Elasticsearch Client',
+    appTitle: 'App Name',
     version: '1.0.0'
   }
 
@@ -44,6 +44,14 @@
 
       function stateChangeSuccess(event, toState, fromState, fromParams) {
         logger.info('State change success')
+
+        // Set title tag
+        toState.data = toState.data || {}
+        if (toState.data.title) {
+          $rootScope.title = config.appTitle + ' - ' + toState.data.title;
+        } else {
+          $rootScope.title = config.appTitle
+        }
       }
 
       function stateChangeNotFound(event, unfoundState, fromState, fromParams) {
