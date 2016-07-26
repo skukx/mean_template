@@ -1,28 +1,22 @@
 (function() {
   var core = angular.module('app.core');
-  var config = {
-    appErrorPrefix: '[NG-App Error] ',
-    appTitle: 'App Name',
-    version: '1.0.0'
-  }
 
-  core.value('config', config);
   core.config(configureExceptions);
   core.run(onRun);
 
   //////////////////////////////////
 
-  configureExceptions.$inject = ['$logProvider', 'exceptionHandlerProvider'];
-  function configureExceptions($logProvider, exceptionHandlerProvider) {
+  configureExceptions.$inject = ['$logProvider', 'exceptionHandlerProvider', 'appConfig'];
+  function configureExceptions($logProvider, exceptionHandlerProvider, appConfig) {
     if ($logProvider.debugEnabled) {
       $logProvider.debugEnabled(true);
     }
 
-    exceptionHandlerProvider.configure(config.appErrorPrefix);
+    exceptionHandlerProvider.configure(appConfig.appErrorPrefix);
   }
 
-  onRun.$inject = ['$rootScope', 'logger'];
-  function onRun ($rootScope, logger) {
+  onRun.$inject = ['$rootScope', 'logger', 'appConfig'];
+  function onRun ($rootScope, logger, appConfig) {
     // $rootScope.base = envConfig.base;
     // $rootScope.title = config.appTitle;
     handleRoutingEvents()
@@ -48,9 +42,9 @@
         // Set title tag
         toState.data = toState.data || {}
         if (toState.data.title) {
-          $rootScope.title = config.appTitle + ' - ' + toState.data.title;
+          $rootScope.title = appConfig.appTitle + ' - ' + toState.data.title;
         } else {
-          $rootScope.title = config.appTitle
+          $rootScope.title = appConfig.appTitle
         }
       }
 
