@@ -1,0 +1,31 @@
+{
+  "client": "./",
+  "server": "../server",
+  "html": "./**/*.html",
+  "htmltemplates": "./app/**/*.html",
+  "vendorjs": [
+    "./bower_components/jquery/dist/jquery.min.js",
+    "./bower_components/angular/angular.min.js",
+    "./bower_components/angular-google-analytics/dist/angular-google-analytics.min.js",
+    "./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
+    "./bower_components/angular-ui-router/release/angular-ui-router.min.js",
+    "./bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"
+  ],
+  "vendorcss": [
+    "./bower_components/bootstrap/dist/css/bootstrap.min.css",
+    "./bower_components/bootstrap/dist/css/bootstrap-theme.min.css",
+    "./bower_components/angular-toastr/dist/angular-toastr.min.css"
+  ],
+  "js": [
+    "./app/**/*.module.js",
+    "./app/**/*.js",
+    "!./app/**/ngconfig.js"
+  ],
+  "css": [
+    "client/assets/**/*.css"
+  ],
+  "images": [
+    "client/assets/img/**/*"
+  ],
+  "build": "../server/dist"
+}

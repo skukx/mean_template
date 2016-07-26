@@ -1,0 +1,16 @@
+{
+  "local": {
+    "appConfig": {
+      "env": "development",
+      "appTitle": "[Dev] My App",
+      "appErrorPrefix": "[DEV:MyApp Error] "
+    }
+  },
+  "production": {
+    "appConfig": {
+      "env": "production",
+      "appTitle": "My App",
+      "appErrorPrefix": "[PROD:MyApp Error] "
+    }
+  }
+}
